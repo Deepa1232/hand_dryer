@@ -1,0 +1,5 @@
+To Chcek the class of varibale
+
+varibale.class
+Exmple - a="Ruby"
+a.class

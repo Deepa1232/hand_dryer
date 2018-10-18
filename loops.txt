@@ -1,0 +1,73 @@
+syntax ( for loop )
+for i in [1,2,3] 
+do puts( i ) 
+end
+syntax using each method
+[1,2,3].each 
+do |i| 
+puts( i ) 
+end
+
+syntax for loop
+for i in (1..10) do 
+puts( i ) 
+end
+Note : instead of do and end in the above example use the curly brackets to indicate it.
+for i in (1..10) do 
+puts( i ) 
+end
+
+
+Using Iteration array
+
+example
+multiarr = [ ['one','two','three','four'], [1,2,3,4] ]
+for (a,b,c,d) in multiarr 
+print("a=#{a}, b=#{b}, c=#{c}, d=#{d}\n" ) 
+end
+
+Note : In Ruby the body of an iterator is called a 'block' and any varibles declared between uprights bars at the top of a block are called  'block parameters'.
+
+Alternate method for delimiting blocks.
+* using do..end
+[[1,2,3],[3,4,5],[6,7,8]].each do 
+|a,b,c| 
+puts( "#{a}, #{b}, #{c}" ) end
+
+
+[[1,2,3],[3,4,5],[6,7,8]].each{ 
+|a,b,c| puts( "#{a}, #{b}, #{c}" )
+ }
+
+WHILE MODIFIERS
+2 ways of using while loop
+while tired
+sleep
+end
+
+or
+
+sleep while tired
+
+WHILE MODIFIERS
+
+begin 
+sleep 
+snore 
+end while tired
+
+Note : in begin and end once the it lets you put the code before the test conidtion is evaluated.
+
+LOOP SYNTAX
+
+loop { 
+puts(arr[i]) 
+i+=1 
+if (i == arr.length) then 
+break 
+end 
+}
+
+ENUMERABLE MODULE
+collect,inculde,min,max
+

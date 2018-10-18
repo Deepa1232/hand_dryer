@@ -1,0 +1,62 @@
+
+
+Bundler - Bundler is a gem itself that helps in orgainising all the gems that are required.
+
+Gems
+
+* Its a software package which can be downloaded and installed in system. its a software package
+* Its a library or plugins, they are kept in respository that can be downloaded.
+* testing, tutorials to HTML
+
+GEMS
+* Ist download the Ruby Gem Library.
+* Go to RubyGems.org -> search for the version -> download the TGZ or ZIP files.-> ruby setup.rb ( Run as a root user ).
+
+Why do we need GEM?
+Library and the code can be created saperately and if we want the gem to be used in saperate library its a tiny modification rather than a whole slew of copying.
+
+To Check which bundle version we are using
+$bundle -v
+
+To Update the bundler use the command
+gem update bundler
+
+To Create a gem using bundler , use the bundle gem command
+bundle gem Deepa
+
+The command creates "Scaffold directory" for the new gem if we have git installed, initializes Git repository in this directory so we can start committing right away.
+if this is 1st time you want to include a the CODE_OF_CONDUCT.md and LICENSE.txt files with your project.
+
+1. Gemfile - used to manage gem dependencies for our library's development.
+it contains a gemspec line indicating bundler will include dependencies specified in the Deepa.
+
+2. Requires Bundler and adds the build, install and release Rake tasks by way of calling Bundler::GemHelper.install_tasks. The build task will build the current version of the gem and store it under the pkg folder, the install task will build and install the gem to our system and release will push the gem to Rubygems for consumption by the public.
+
+3. CODE_OF_CONDUCT.md: Provides a code of conduct that you expect all contributors to your gem to follow. Will only be included if you chose to have it included.
+
+4. LICENSE.txt: Includes the MIT license. Will only be included if you chose to have it included.
+
+5. gitignore:This ignores anything in the pkg directory,anything with a .gem extension and the .bundle directory.
+
+6. Deepa.gemspec: The Gem specification file. This is where we provide information for Rubygem's consumption such as the name,description and homepage of our gem.This is also where v specify the dependencies our gem need to run.
+
+7. lib/Deepa.rb: The main file to define our gem’s code. This is the file that will be required by Bundler when our gem is loaded.This file defines a module which we can use as a namespace for all our gem’s code. It’s best practice to put our code in.
+
+8. lib/Deepa: This folder should contain all the code (classes, etc.) for our gem The lib/Deepa.rb file is there for setting up our gem’s environment, whilst all the parts of it go in this folder.
+
+9. lib/Deepa/version.rb:Defines a Deepa module and in it, a VERSION constant.This file is loaded by the Deepa.gemspec to specify a version for the gem specification.When we release a new version of the gem we will increment a part of this version number to indicate to Rubygems that we’re releasing a new version.
+
+=====================================================================================================================
+
+Testing our GEM
+
+1. To get started , we will create a spec directory at the root of gem by using the command mkdir spec.
+2. we’ll specify in our foodie.gemspec file that rspec is a development dependency by adding this line inside the Gem::Specification block: using the command
+
+spec.add_development_dependency "rspec", "~> 3.2"
+
+3. Because we have the gemspec method call in our Gemfile, Bundler will automatically add this gem to a group called “development” which then we can reference any time we want to load these gems with the following line:
+
+Bundler.require(:default, :development)
+
+4. 

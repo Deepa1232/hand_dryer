@@ -1,0 +1,5 @@
+gem -v
+
+gem update --system
+
+gem install gemname

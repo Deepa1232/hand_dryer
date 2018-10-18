@@ -1,0 +1,10 @@
+printf
+puts
+gets
+
+Variables
+
+Local Variables - Varibles begin with lower case letters. they are restricted to a well-defined scope.
+Global Variables - Starts with $ followed by captal letter.
+
+

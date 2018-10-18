@@ -1,0 +1,85 @@
+* Array is sequential collection  of items.
+
+* It is permissible to mix data types in an array and even to include expressions which yield some value.
+* index values
+* back quotes in arry - if you the key word then its treated as a command and the command is executed.
+*another way of writing the string in array is
+y = %w(sentences)
+* array using .new method, the first to set the size of array and the second to specify the element to place at each index of the array example
+a = Array.new
+a = Array.new(2) #[nil,nil]
+a = Array.new(2,"hello world") #["hello world",hello world"]
+* Multi-dimentional array
+a= Array.new(2)
+a[0]= Array.new(2,"hello")
+a[1]= Array.new(2,"world")
+* nest array
+a = [ [1,2,3,4]
+	[5,6,7,8]
+	[9,10,11,12]
+	[13,14,15,16] ]
+* Iterating over array
+* using sub arrays examples
+for(a,b,c,d) in multiarr
+print("a=#{a},b=#{b},c=#{c},d=#{d}\n")
+end
+* using nested for loop ( for loop with in for loop)
+* indexing in array
+ example print( arr[0,5])
+* copying array
+a=["hello","world"]
+a1=a
+a1 is copy of a if u change a a1 will also change.
+a3=a.clone
+a3 is a copy of a but changing a wont change a3.
+* Comparing in array
+a1<=>a2
+returns -1 if a1 is less than a2
+returns 0 if a1 and a2 are equal
+returns 1 if a1 is greater than a2
+* sort in array ( more detail chapter 12)
+* use include comparible
+
+
+Hashes
+
+* the entities are indexed by some unique key which is associated with a value.
+* to create a hash
+h1=Hash.new -> this will create a nill value
+h2=Hash.new("Some king of ring")
+*h2['treasure1'] = 'Silver ring' 
+h2['treasure2'] = 'Gold ring' 
+h2['treasure3'] = 'Ruby ring' 
+h2['treasure4'] = 'Sapphire ring'
+* if you use the same key twice you will end up overwriting the original value.
+* shorthand method of creating hashes and initializing them with key value pair
+x1 = X.new('my Xobject') 
+h2[x1] = 'Diamond ring'
+*Indexing into a Hash
+h1 = { 'room1'=>'The Treasure Room', 
+'room2'=>'The Throne Room', 
+'loc1'=>'A Forest Glade', 
+'loc2'=>'A Mountain Stream' }
+puts(h1['room2'])
+* specifying a default value
+p(h1.default) h1.default = 'A mysterious place'
+* copying a value of hash
+h4 = h1 h4['room1']=?A new Room' 
+puts(h1['room1'])
+* cloneing in hash
+h5 = h1.clone 
+h5['room1'] = 'An even newer Room' 
+puts(h1['room1'])
+
+* sort in array (pending)
+hash methods
+* delete - aHash.delete( someKey )
+* test key value - aHash.has_key?( someKey )
+* aHash.has_value?( someValue )
+* aHash.invert
+* remember what is keys and values in hash
+* flatten method
+a=[1, 2, 3, [4, 5, 6]]
+a.flatten
+result will be [1, 2, 3, 4, 5, 6]
+

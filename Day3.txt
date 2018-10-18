@@ -1,0 +1,47 @@
+String Data type
+
+
+Using Initialize(constructor) method
+
+attr_accessor - its a temperory storage
+
+attr_reader - read only
+attr_writer - hold value
+attr_accessor - read/hold value ( only one that is avaible now ) + "string"
+
+string methods
+1. s.reverse
+2. s.length
+3. s.upcase
+4. s.capitalize
+5. s.swapcase
+6. s.downcase
+7. s.insert(7,"Not")
+8. s.squeeze
+9. s.split
+
+string methods
+
+1. s.bytes
+2. s.delete
+3. s.each_char{|x| print x,'==='}
+4. s.empty?
+5. s.end_with?("c")
+
+Numeric data type
+
+1. number.abs -> absolute value
+2. number.bit_length
+3. number.divmod(6)
+4. number.even?
+5. number.odd?
+6. number.zero?
+7. number.size?
+
+Big Num methods
+coerce -complex number conversion
+ceil method
+number.floor
+number.infinite
+number.nan?
+number.round(3)
